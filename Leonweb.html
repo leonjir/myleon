@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Leon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #000000, #1c1c1c);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      background: rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 100px auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1.2s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #ffd700, #fff8dc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    section p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 20px;
+      padding: 0;
+    }
+
+    ul li {
+      background: rgba(255, 215, 0, 0.1);
+      margin: 8px auto;
+      padding: 10px;
+      border-radius: 8px;
+      width: 60%;
+      transition: background 0.3s ease;
+    }
+
+    ul li:hover {
+      background: rgba(255, 215, 0, 0.3);
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #ffd700, #ffc107);
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #999;
+      background: rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Animasi dolar jatuh */
+    .dollar {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      color: #00ff7f;
+      animation: fall linear;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Musik Otomatis -->
+  <audio id="bg-music" autoplay loop>
+    <source src="happy-nation.mp3" type="audio/mpeg">
+  </audio>
+
+  <header>Tentang Leon</header>
+
+  <section class="reveal">
+    <h2>Halo, Saya Leon</h2>
+    <p>
+      Saya adalah seseorang yang memiliki minat besar pada teknologi, desain, dan dunia digital.
+      Saya percaya bahwa kombinasi kreativitas dan teknologi dapat menghasilkan sesuatu yang
+      bernilai dan berdampak.
+    </p>
+    <h3>Hobi Saya:</h3>
+    <ul>
+      <li>Belajar Pemrograman</li>
+      <li>Desain UI/UX</li>
+      <li>Mendengarkan Musik</li>
+      <li>Bermain Game</li>
+    </ul>
+    <div class="btn-container">
+      <a href="mailto:leon@example.com" class="btn">Email Saya</a>
+      <a href="https://wa.me/6281234567890" class="btn" target="_blank">WhatsApp Saya</a>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Apa itu Teknologi?</h2>
+    <p>
+      Teknologi adalah penerapan pengetahuan ilmiah untuk memecahkan masalah praktis
+      dalam kehidupan sehari-hari. Teknologi mencakup berbagai bidang mulai dari
+      komunikasi, transportasi, kesehatan, pendidikan, hingga hiburan.
+    </p>
+    <p>
+      Perkembangan teknologi telah mengubah cara kita bekerja, belajar, dan berinteraksi.
+      Misalnya, internet memungkinkan informasi tersebar dengan cepat, dan smartphone
+      memungkinkan kita tetap terhubung kapan saja dan di mana saja.
+    </p>
+  </section>
+
+  <section class="reveal">
+    <h2>Peran Teknologi di Masa Depan</h2>
+    <p>
+      Di masa depan, teknologi diperkirakan akan semakin terintegrasi dengan kehidupan manusia,
+      mulai dari kecerdasan buatan (AI), Internet of Things (IoT), hingga robotika.
+      Hal ini memberikan peluang besar namun juga tantangan dalam hal etika, keamanan,
+      dan dampak sosial.
+    </p>
+  </section>
+
+  <section class="reveal">
+    <h2>Kesimpulan</h2>
+    <p>
+      Teknologi bukan hanya alat, tetapi juga sarana untuk menciptakan perubahan.
+      Dengan pemahaman dan penggunaan yang tepat, teknologi dapat membantu kita
+      mencapai kehidupan yang lebih baik.
+    </p>
+  </section>
+
+  <footer>&copy; 2025 Leon. Semua Hak Dilindungi.</footer>
+
+  <script>
+    // Animasi scroll
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", () => {
+      reveals.forEach((el) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          el.classList.add("show");
+        }
+      });
+    });
+
+    // Animasi dolar jatuh
+    function createDollar() {
+      const dollar = document.createElement("div");
+      dollar.classList.add("dollar");
+      dollar.style.left = Math.random() * window.innerWidth + "px";
+      dollar.style.animationDuration = Math.random() * 3 + 2 + "s";
+      dollar.innerText = "$";
+      document.body.appendChild(dollar);
+
+      setTimeout(() => {
+        dollar.remove();
+      }, 5000);
+    }
+
+    setInterval(createDollar, 300);
+  </script>
+</body>
+</html>
